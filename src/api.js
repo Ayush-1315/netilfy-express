@@ -14,6 +14,11 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/test", (req, res) => {
+  res.json({
+    hello: "testing!"
+  });
+});
 // Use the router to handle requests to the `/.netlify/functions/api` path
 app.use(`/.netlify/functions/api`, router);
 
